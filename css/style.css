@@ -1,0 +1,65 @@
+*
+{
+    margin: 0;
+    padding:0;
+}
+body,html
+{
+    height: 100%;
+}
+body
+{
+    background-color:#000000;
+
+}
+.time
+{
+    display: flex;
+}
+
+
+.container
+{
+    width:40%;
+    height:60%;
+    background-color:#fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:3px solid gray;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+
+/* Style buttons */
+.buttons
+{
+    display:flex;
+    justify-content: center;
+    margin-top:10%;
+    margin-left: 5%;
+}
+
+#start
+{
+    background-color:#339933;
+}
+
+#stop
+{
+    background-color:#ff0000;
+}
+
+.button
+{
+    width:80px;
+    cursor:pointer;
+    height:45px;
+    font-weight: 900;
+    outline:none;
+    border: 1px solid black;
+    margin-right: 25px;
+}
