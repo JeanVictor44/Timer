@@ -21,7 +21,7 @@ const outputMinutes = document.getElementById('minutes')
 /* Function factory*/ 
 function timer(displayMinutes, displaySeconds, startButton){
     // Private Attribute -> Atributo privado 
-let [minutes, seconds] = [ [0,0], [0,0] ]
+let [seconds, minutes] = [ [0,0], [0,0] ]
 function UpdateScreen(){
     displayMinutes.innerHTML = `${minutes[0]}${minutes[1]}:`
     displaySeconds.innerHTML = `${seconds[0]}${seconds[1]}`
@@ -65,10 +65,8 @@ return{
     },1000) : ''},
 
     pressReset(){
-        seconds[0] = 0
-        seconds[1] = 0
-        minutes[0] = 0
-        minutes[1] = 0
+        seconds = [0,0]
+        minutes = [0,0]
         startButton.setAttribute('id','start')
         startButton.innerHTML = 'Start'
         clearInterval(interval)
@@ -76,6 +74,9 @@ return{
     }
 }
 }
+/*  
+    Criar a interação para alterar as cores através de um checkbox igual ao projeto Facebook
+*/
 const tempo = timer(outputMinutes, outputSeconds, start)
 start.onclick = tempo.pressStart
 reset.onclick = tempo.pressReset
