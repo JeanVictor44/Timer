@@ -57,7 +57,7 @@ return{
                 seconds[0] = 0
                 seconds[1] = 0
             }
-            displayMinutes.innerHTML = `${minutes[0]}${minutes[1]}:` 
+             
         }}else{
             seconds[1] += 1
         }
